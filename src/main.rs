@@ -35,4 +35,8 @@ mod collatz_tests {
             assert!(collatz(*n) > 0);
 		}
 	}
+    #[test]
+    fn steps_specific_test() {
+     assert_eq!(collatz(27) - 1, 111); // again ignoring first step as 0...
+	}
 }
