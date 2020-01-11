@@ -24,3 +24,15 @@ fn collatz(inp: u64) -> u64 {
 	}
     counter
 }
+
+#[cfg(test)]
+mod collatz_tests {
+    use super::*;
+    #[test]
+    fn couple_numbers() {
+        let numbers: [u64; 5] = [2, 24, 23, 678910, 10987654321];
+        for n in numbers.iter() {
+            assert!(collatz(*n) > 0);
+		}
+	}
+}
